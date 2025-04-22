@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Courses</title>
+<style>
+  body {
+    background-color: antiquewhite;
+    font-family: Arial, sans-serif;
+  }
+
+  header {
+    text-align: center;
+    font-size: 50px;
+  }
+
+  .linksAndProfile {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(35,31,32,1.00);
+    padding: 10px;
+	 border-radius: 10px;
+  }
+
+  .Logo {
+    width: 200px;
+    height: 200px;
+  }
+
+  #navbar {
+    display: flex;
+    gap: 20px;
+  }
+
+  #navbar a {
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: bold;
+  }
+
+  #profile {
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+  }
+
+  #profile img {
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .filter-section {
+    margin: 20px;
+    text-align: center;
+  }
+
+  .jobs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .job {
+    background-color: white;
+    border: 1px solid #231F20;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .job p {
+    margin: 10px 0;
+  }
+
+  .apply a {
+    font-size: 20px;
+    color: #231F20;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .apply a:hover {
+    color: #d9534f;
+  }
+
+  .job .title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        background-color: #FAEBD7;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    .btn:hover {
+        background-color: #FFFFFF;
+        transform: scale(1.1);
+    }
+	.btn {
+		font-size: 30px;
+		color: black;
+	}
+</style>
+</head>
+<body>
+
+<div class="linksAndProfile">	
+	<span>
+		<img src="Hot Beans logo.png" width="200" height="200" alt="Logo" class="Logo" align="left" >
+	</span>
+	
+	<span id="navbar"> <main class="head">
+            <a href="index.html" class="btn" style="color: black">Home</a>
+            <a href="jobs optimised.html" class="btn" style="color: black">Jobs</a>
+            <a href="team.html" class="btn" style="color: black">Team</a>
+            <a href="Courses.html" class="btn" style="color: black">Courses</a>
+			</main> 
+	</span>
+	<span id="profile"><p class="profile"><img src="pic for html pg 3/pfp.png" width= 50px height=50px><br><p>SalSal007</p>
+	</span>
+</div>
+
+
+  <header>Job Section</header>
+
+  <div class="filter-section">
+    <label for="jobType">Apprenticeship: </label>
+    <select id="jobType" onchange="filterJobs()">
+      <option value="">All</option>
+      <option value="softwareengineer">Software Engineer</option>
+      <option value="networkengineer">Network Engineer</option>
+      <option value="cloudcomputing">Cloud Computing Engineer</option>
+      <option value="dataanalyst">Data Analyst</option>
+    </select>
+
+    <label for="salaryRange">Level: </label>
+    <select id="salaryRange" onchange="filterJobs()">
+      <option value="">All</option>
+      <option value="£60K">Level 3</option>
+      <option value="£45K">Level 4</option>
+      <option value="£50K">Level 6</option>
+      <option value="£35K">Level 7</option>
+    </select>
+  </div>
+
+  <div class="jobs" id="jobList">
+    <div class="job softwareengineer £45K">
+      <p class="title">Software Engineering Course ~ Level 4 20k Salary</p>
+      <p>In this course you will learn how to design, devlop and maintain software applications. you will also learn languages such as Swift, C# and&nbsp; Python for IOS and for Andriod Java,Python and C#.</p>
+      <p>Qualifications: GCSE Grade 4 or 5 Maths:Grade 6 or higher English:4 or higher</p>
+      <p class="apply"><a href="apply section.html">Apply</a></p>
+    </div>
+
+    <div class="job networkengineer £60K">
+      <p class="title">Network Engineer Course ~ Level 3 19k Salary</p>
+      <p>Your role as a Network Engineer will be to install and congiure networks protocools. always monitor networks to make sure they are working properly. upgrading the security of the network so they arent vunerable to risks.</p>
+      <p>Qualifications: GCSE Grade 4 or 5 Maths:Grade 6 or higher English:4 or higher</p>
+      <p class="apply"><a href="apply section.html">Apply</a></p>
+    </div>
+
+    <div class="job cloudcomputing £50K">
+      <p class="title">Cloud Computer Engineer&nbsp; ~ Level 6 Degree Apprenticeship 22K salary</p>
+      <p>Your role as a Cloud Computing Engineer will be intergratng cloud based applications to allow all network users to securely communicate and access data. You will be studying at Queen Mary University.</p>
+      <p>Qualifications:GCSE Grade 6 or higher. minium 7 achieved. A levels AAB or BTEC DDM</p>
+      <p class="apply"><a href="apply section.html">Apply</a></p>
+    </div>
+
+    <div class="job dataanalyst £35K">
+      <p class="title">Data Analyst&nbsp; ~ Level 7 Degree Apprenticeship 24k Salary</p>
+      <p>Your role as a Data Analyst apprentice will be to clean data to analyse it, analyse the data, interpret it and diagnose it for the company. You will be learning many skills and languages at the same time. You will be studying at Imperial College London.</p>
+      <p>Qualifications:GCSE Grade 7 or higher in Maths, English 6, science 7.7, minium 7 GCSE's achieved. A levels AAA or BTEC DDD</p>
+      <p class="apply"><a href="apply section.html">Apply</a></p>
+    </div>
+  </div>
+
+  <script>
+    function filterJobs() {
+      const jobType = document.getElementById('jobType').value.toLowerCase();
+      const salaryRange = document.getElementById('salaryRange').value;
+
+      const jobs = document.querySelectorAll('.job');
+
+      jobs.forEach(job => {
+        const jobTitle = job.classList;
+        const matchesType = jobType ? jobTitle.contains(jobType) : true;
+        const matchesSalary = salaryRange ? jobTitle.contains(salaryRange) : true;
+
+        if (matchesType && matchesSalary) {
+          job.style.display = 'block';
+        } else {
+          job.style.display = 'none';
+        }
+      });
+    }
+  </script>
+	<style>
+		.head {
+		background-color: rgba(0,0,0,0.00);
+		text-align: center
+	}
+	.head{font-size:50px}
+	p {text-align: end}
+	body {
+		background-color: antiquewhite
+	}
+	header {
+		text-align: center
+	}
+	</style>
+
+</body>
+</html>
